@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE `numbersOfField` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `xLine` INTEGER NOT NULL DEFAULT 0,
+    `yLine` INTEGER NOT NULL DEFAULT 0,
+    `number` INTEGER NOT NULL DEFAULT 0,
+    `borderX` INTEGER NOT NULL DEFAULT 0,
+    `borderY` INTEGER NOT NULL DEFAULT 0,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

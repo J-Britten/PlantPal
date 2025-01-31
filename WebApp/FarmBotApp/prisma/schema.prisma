@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "" //env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  name     String @unique
+  password String
+  Team     Team?  @relation(fields: [teamId], references: [id])
+  teamId   Int?   
+}
+
+model Team { 
+  id      Int    @id @default(autoincrement())
+  name    String
+  members User[]
+}
+
+model ChatMessage {
+  id             Int      @id @default(autoincrement())
+  message        String
+  createdAt      DateTime @default(now())
+  fromUserId     Int
+  toUserId       Int
+  toTeamId       Int
+  chatIdentifier String
+
+  @@index([chatIdentifier])
+}
+
+model UserSettings {
+  id               Int    @id @default(autoincrement())
+  username         String @unique
+  interactionLevel Int    @default(0)
+  dailyBotActions      Int    @default(20)
+  dailyWaterReserve      Int    @default(1000)
+  accountActivated     Boolean @default(false)
+}
+
+model UserInfo {
+  id               Int    @id @default(autoincrement())
+  username         String @unique
+  field             Int    @default(0)
+  fieldGroupId      Int   @default(0)
+
+}
+
+
+
+model UserTime {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  loginTime  DateTime
+  logoffTime DateTime
+
+  @@index([userId])
+}
+
+
+
+
+model UserActivityLog {
+  id          Int      @id @default(autoincrement())
+  userName    String
+  type        String 
+  data        Json    
+  timestamp   DateTime 
+  @@index([userName])
+}
+
+model PhotoGrid {
+  id          Int      @id @default(autoincrement())
+  timestamp   DateTime
+  gridId      Int
+  data        Json   
+  @@index([id])
+}
+
+
+model TimelinePost {
+  id          Int      @id @default(autoincrement())
+  userName    String
+  type        Int //we need to define the event types we have
+  title       String
+  image       String //should be a url
+  text        String
+  createdAt   DateTime @default(now())
+  public      Boolean  @default(false)
+  @@index([userName])
+}
