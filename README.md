@@ -4,7 +4,7 @@
 
 ## Abstract
 Urban gardening is widely recognized for its numerous health and environmental benefits. However, the lack of suitable
-garden spaces, demanding daily schedules and limited gardening expertise present major roadblocks for citizens looking
+garden spaces, demanding daily schedules, and limited gardening expertise present major roadblocks for citizens looking
 to engage in urban gardening. While prior research has explored smart home solutions to support urban gardeners, these
 approaches currently do not address these practical barriers. In this paper, we present `PlantPal`, a system that enables the
 cultivation of garden spaces irrespective of one’s location, expertise level, or time constraints. `PlantPal` enables the shared
@@ -14,20 +14,20 @@ sense of connection with one’s field, and provided an engaging experience desp
 considerations for future robot-assisted urban gardening concepts.
 
 
-For more information on the project, please refer to the full paper (Will be added once the work is published). 
+For more information on the project, please refer to our [full paper](https://doi.org/10.1145/3706598.3713180). 
 
 ## Authors
 [Albin Zeqiri](mailto:albin.zeqiri@uni-ulm.de), [Julian Britten](mailto:julian.britten@uni-ulm.de), [Clara Schramm](clara.schramm@uni-ulm.de), [Pascal Jansen](mailto:pascal.jansen@uni-ulm.de), [Michael Rietzler](michael.rietzler@uni-ulm.de), [Enrico Rukzio](enrico.rukzio@uni-ulm.de)
 
 
 ## Content
-Each directory contains it's own README with more detailed information on it's content.
+Each directory contains its own README with more detailed information on its content.
 
 
 ### [FarmBot](./FarmBot/README.md)
-The [FarmBot](https://farm.bot/) is a 100% Open Source gardening robot capable of taking care of most gardening tasks.
+The [FarmBot](https://farm.bot/) is a 100% open-source gardening robot capable of taking care of most gardening tasks.
 
-The `FarmBot` directory contains information about custom sequences and routines, settings, general modifications (e.g. 3d printed parts) made to the device that are either required or recommended for the FarmBot to be ready to used with the FarmBot Web App. For more information, please refer to the [README file](./FarmBot/README.md)
+The `FarmBot` directory contains information about custom sequences and routines, settings, general modifications (e.g., 3d printed parts) made to the device that are either required or recommended for the FarmBot to be ready to used with the FarmBot Web App. For more information, please refer to the [README file](./FarmBot/README.md)
 
 
 ### [PlantPal Web App](./WebApp/README.md)
